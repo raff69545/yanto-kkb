@@ -1,0 +1,145 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0.5rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo span {
+    color: black;
+  }
+  
+  .nonhamburger {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .menu-link {
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-link:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
+  
+  .join-button {
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    border: 2px solid #2f855a;
+    color: #2f855a;
+    background-color: white;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  .join-button:hover {
+    background-color: #2f855a;
+    color: white;
+  }
+  
+  /* Hamburger */
+  .hamburger {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* Mobile Navigation */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    z-index: 25;
+  }
+  
+  .mobile-nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  
+  .mobile-link {
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #2f855a;
+    margin: 1rem 0;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mobile-link:hover {
+    background-color: white;
+    color: #2f855a;
+    border: 2px solid #2f855a;
+  }
+  
+  /* Active Navigation */
+  nav.show {
+    transform: translateX(0);
+  }
+  
+  /* Media Queries */
+  @media screen and (min-width: 769px) {
+    .hamburger {
+      display: none;
+    }
+  
+    .mobile-nav {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nonhamburger {
+      display: none;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  

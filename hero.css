@@ -1,0 +1,153 @@
+/* Main Container */
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section Styles */
+.home-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 4rem;
+}
+
+.left-section,
+.right-section {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+.text-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.highlighted-text {
+    color: #38a169;
+}
+
+.description {
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    border: 2px solid #38a169;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.stat-item:hover {
+    transform: translateY(-0.25rem);
+    background-color: #e6f9ee;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.stat-description {
+    font-size: 0.875rem;
+}
+
+.right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    max-width: 500px;
+    width: 100%;
+}
+
+.image {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 300px;
+    animation: floating 2s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsiveness */
+@media screen and (min-width: 768px) {
+    .image-container {
+        margin-top: 2rem;
+    }
+    .home-content {
+        flex-wrap: nowrap;
+        gap: 0;
+    }
+
+    .left-section {
+        flex: 1;
+        text-align: left;
+    }
+
+    .right-section {
+        flex: 1;
+        text-align: center;
+    }
+
+    .text-container {
+        max-width: 90%;
+        padding-right: 2rem;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .image-container {
+        margin-top: 2rem;
+    }
+}
